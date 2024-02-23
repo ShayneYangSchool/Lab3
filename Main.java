@@ -35,21 +35,23 @@ public class Main {
 		Line s8 = new Line(p6, p7);
 		Line s9 = new Line(p8, p9);
 
-		// Solve for x or y
+		// Solve for x
 		System.out.println("Solving for X:");
-		System.out.println("x = " + Line.solveFor(0.0, s0));
-		System.out.println("x = " + Line.solveFor(1.2, s1));
-		System.out.println("x = " + Line.solveFor(9.3, s2));
-		System.out.println("x = " + Line.solveFor(8.9, s3));
-		System.out.println("x = " + Line.solveFor(1.7, s4));
-
+		System.out.println("x = " + s0.solveForX(0.0));
+		System.out.println("x = " + s2.solveForX(1.2));
+		System.out.println("x = " + s4.solveForX(9.3));
+		System.out.println("x = " + s6.solveForX(8.9));
+		System.out.println("x = " + s8.solveForX(1.7));
+		// Solve for y
 		System.out.println("Solving for Y:");
-		System.out.println("y = " + Line.solveFor(s5, 4.3));
-		System.out.println("y = " + Line.solveFor(s6, 5.6));
-		System.out.println("y = " + Line.solveFor(s7, 3.8));
-		System.out.println("y = " + Line.solveFor(s8, 1.5));
-		System.out.println("y = " + Line.solveFor(s9, 2.0));
+		System.out.println("y = " + s1.solveForY(4.3));
+		System.out.println("y = " + s3.solveForY(5.6));
+		System.out.println("y = " + s5.solveForY(3.8));
+		System.out.println("y = " + s7.solveForY(1.5));
+		System.out.println("y = " + s9.solveForY(2.0));
+		
 		// Check if a point is on a line
+		System.out.println("\nCheck if a point is on a line");
 		System.out.printf("Is point (%.1f,%.1f) on line %s: %b\n", p0.getX(), p0.getY(), s0.getEquation(),
 				s0.onLine(p0, s0));
 		System.out.printf("Is point (%.1f,%.1f) on line %s: %b\n", p1.getX(), p1.getY(), s1.getEquation(),

@@ -21,12 +21,12 @@ public class Line {
 		}
 	}
 
-	static public double solveFor(double y, Line L) {
-		return Math.round((y - L.getConstant()) / L.getSlope() * 1000.0) / 1000.0;
+	public double solveForX(double y) {
+		return Math.round((y - this.b) / this.m * 1000.0) / 1000.0;
 	}
 
-	static double solveFor(Line L, double x) {
-		return Math.round((x * L.getSlope() + L.getConstant()) * 1000.0) / 1000.0;
+	public double solveForY(double x) {
+		return Math.round((x * this.m	+ this.b) * 1000.0) / 1000.0;
 	}
 
 	public String getEquation() {
@@ -36,13 +36,5 @@ public class Line {
 	static double calcSlope(Point p1, Point p2) {
 		double slope = ((p2.getY() - p1.getY()) / (p2.getX() - p1.getX()));
 		return slope;
-	}
-
-	public double getSlope() {
-		return this.m;
-	}
-
-	public double getConstant() {
-		return this.b;
 	}
 }
