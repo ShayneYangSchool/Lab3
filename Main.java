@@ -3,7 +3,9 @@ Name: Shayne Yang
 Teacher: Mr. Guglielmi
 Date: 2024-02-22
 Lab: Lab 3, Abstract Data Classes
-Description: This program will create different instances of the Line and Point classes. THe program will check if a point is on a line, calculate the slope between 2 points and solve for x or y.
+Description:This program will create different instances of the Line and Point classes. 
+			The program will check if a point is on a line, calculate the slope between 
+			2 points and solve for x or y.
 */
 
 public class Main {
